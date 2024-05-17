@@ -20,7 +20,7 @@ class LookupDependenciesPluginFunctionalTest {
         buildFile.writeText(
             """
             plugins {
-                id("dev.hsbrysk.gradle.lookup-dependencies")
+                id("dev.hsbrysk.lookup-dependencies")
             }
             """.trimIndent(),
         )
@@ -40,7 +40,7 @@ class LookupDependenciesPluginFunctionalTest {
         buildFile.writeText(
             """
             plugins {
-                id("dev.hsbrysk.gradle.lookup-dependencies")
+                id("dev.hsbrysk.lookup-dependencies")
                 java
             }
 
@@ -64,7 +64,7 @@ class LookupDependenciesPluginFunctionalTest {
         buildFile.writeText(
             """
             plugins {
-                id("dev.hsbrysk.gradle.lookup-dependencies")
+                id("dev.hsbrysk.lookup-dependencies")
                 java
             }
 
