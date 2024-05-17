@@ -1,6 +1,10 @@
 # gradle-lookup-dependencies
 
-## Publish Local
+TBD
+
+## How to develop?
+
+### Publishing Local
 
 ```shell
 ./gradlew :plugin:publishToMavenLocal
