@@ -10,13 +10,6 @@ plugins {
     id("conventions.functional-test")
 }
 
-group = "dev.hsbrysk.gradle"
-version = "0.0.1"
-
-tasks.withType<Jar> {
-    archiveBaseName.set("lookup-dependencies")
-}
-
 gradlePlugin {
     val lookupDependencies by plugins.creating {
         id = "dev.hsbrysk.lookup-dependencies"
@@ -36,12 +29,11 @@ gradlePlugin {
 gradlePlugin.testSourceSets.add(sourceSets["functionalTest"])
 
 signing {
-    if (isOnCI) {
-        useInMemoryPgpKeys(
-            providers.environmentVariable("SIGNING_PGP_KEY").orNull,
-            providers.environmentVariable("SIGNING_PGP_PASSWORD").orNull,
-        )
-    } else {
+    if (project.version.toString().endsWith("-SNAPSHOT")) {
         isRequired = false
     }
+    useInMemoryPgpKeys(
+        providers.environmentVariable("SIGNING_PGP_KEY").orNull,
+        providers.environmentVariable("SIGNING_PGP_PASSWORD").orNull,
+    )
 }
