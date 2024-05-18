@@ -31,10 +31,9 @@ gradlePlugin.testSourceSets.add(sourceSets["functionalTest"])
 signing {
     if (project.version.toString().endsWith("-SNAPSHOT")) {
         isRequired = false
-    } else {
-        useInMemoryPgpKeys(
-            providers.environmentVariable("SIGNING_PGP_KEY").orNull,
-            providers.environmentVariable("SIGNING_PGP_PASSWORD").orNull,
-        )
     }
+    useInMemoryPgpKeys(
+        providers.environmentVariable("SIGNING_PGP_KEY").orNull,
+        providers.environmentVariable("SIGNING_PGP_PASSWORD").orNull,
+    )
 }
