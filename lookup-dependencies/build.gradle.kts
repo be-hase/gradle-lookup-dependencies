@@ -10,10 +10,6 @@ plugins {
     id("conventions.functional-test")
 }
 
-tasks.withType<Jar> {
-    archiveBaseName.set("lookup-dependencies")
-}
-
 gradlePlugin {
     val lookupDependencies by plugins.creating {
         id = "dev.hsbrysk.lookup-dependencies"

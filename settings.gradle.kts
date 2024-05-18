@@ -14,4 +14,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "gradle-lookup-dependencies"
 
-include("plugin")
+include("lookup-dependencies")
