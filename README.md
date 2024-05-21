@@ -15,7 +15,7 @@ By using this plugin, you can solve these issues easily.
 ### TL;DR
 
 ```
-./gradlew lookupDependencies --artifact org.springframework:spring-web --version-expressions ">= 6.1.0, < 6.1.6"
+./gradlew lookupDependencies --dependency org.springframework:spring-web --version-range ">= 6.1.0, < 6.1.6"
 
 ...
 
@@ -34,15 +34,15 @@ org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0
 ./gradlew help --task lookupDependencies
 
 Options
-     --allow-revisit     Allows the traversal to visit dependency multiple times, including those that have been visited before. Default is false
+     --allow-revisit     When the dependency tree is being explored, omit this if the dependency has already been explored.
 
      --no-allow-revisit     Disables option --allow-revisit.
 
-     --artifact     The artifact you want to lookup
-
      --configuration     The configuration you want to lookup. Default is all configuration.
 
-     --version-expressions     Comparative expression of version to lookup. e.g. `>= 1.3, < 1.26.0`
+     --dependency     The dependency you want to lookup
+
+     --version-range     Comparative expression of version to lookup. e.g. `>= 1.3, < 1.26.0`
 ```
 
 ### Examples
@@ -52,10 +52,10 @@ Options
 ./gradlew lookupDependencies --dependency org.springframework:spring-web:6.1.6
 
 # lookup org.springframework:spring-web (version is not considered)
-./gradlew lookupDependencies --artifact org.springframework:spring-web:6.1.6
+./gradlew lookupDependencies --dependency org.springframework:spring-web:6.1.6
 
 # lookup org.springframework:spring-web with version in the range `>= 6.1.0` and `< 6.1.6`
-./gradlew lookupDependencies --artifact org.springframework:spring-web:6.1.6
+./gradlew lookupDependencies --dependency org.springframework:spring-web:6.1.6
 ```
 
 ## Contributing
