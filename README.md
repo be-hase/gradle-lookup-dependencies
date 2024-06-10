@@ -1,5 +1,7 @@
 # gradle-lookup-dependencies
 
+![Gradle Plugin Portal Version](https://img.shields.io/gradle-plugin-portal/v/dev.hsbrysk.lookup-dependencies)
+
 ## Motivation
 
 There are cases where you want to check whether a specific dependency is included, and if it is, where it came from
@@ -13,6 +15,13 @@ By using this plugin, you can solve these issues easily.
 ## How to use?
 
 ### TL;DR
+
+```kotlin
+// apply plugin
+plugins {
+  id("dev.hsbrysk.lookup-dependencies") version "{{version}}"
+}
+```
 
 ```
 ./gradlew lookupDependencies --dependency org.springframework:spring-web --version-range ">= 6.1.0, < 6.1.6"
