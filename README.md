@@ -61,10 +61,10 @@ Options
 ./gradlew lookupDependencies --dependency org.springframework:spring-web:6.1.6
 
 # lookup org.springframework:spring-web (version is not considered)
-./gradlew lookupDependencies --dependency org.springframework:spring-web:6.1.6
+./gradlew lookupDependencies --dependency org.springframework:spring-web
 
 # lookup org.springframework:spring-web with version in the range `>= 6.1.0` and `< 6.1.6`
-./gradlew lookupDependencies --dependency org.springframework:spring-web:6.1.6
+./gradlew lookupDependencies --dependency org.springframework:spring-web --version-range ">= 6.1.0, < 6.1.6"
 ```
 
 ## Contributing
