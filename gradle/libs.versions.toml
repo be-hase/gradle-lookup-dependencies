@@ -13,4 +13,4 @@ gradle-plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", v
 gradle-plugin-ktlint = { module = "org.jlleitschuh.gradle:ktlint-gradle", version = "12.1.1" }
 
 [plugins]
-plugin-publish = {id="com.gradle.plugin-publish", version="1.2.1"}
+plugin-publish = {id="com.gradle.plugin-publish", version="1.2.2"}
