@@ -11,6 +11,10 @@ val functionalTest by sourceSets.creating
 val functionalTestImplementation by configurations.getting {
     extendsFrom(configurations.testImplementation.get())
 }
+@Suppress("unused")
+val functionalTestRuntimeOnly by configurations.getting {
+    extendsFrom(configurations.testRuntimeOnly.get())
+}
 
 dependencies {
     functionalTestImplementation(project)
