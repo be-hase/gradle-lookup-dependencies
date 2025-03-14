@@ -4,7 +4,7 @@ ktlint = "1.2.1"
 
 [libraries]
 assertk = { module = "com.willowtreeapps.assertk:assertk-jvm", version = "0.28.1" }
-junit-bom = { module = "org.junit:junit-bom", version = "5.12.0" }
+junit-bom = { module = "org.junit:junit-bom", version = "5.12.1" }
 mockk-core = { module = "io.mockk:mockk", version = "1.13.17" }
 
 # gradle plugins for build-logic
