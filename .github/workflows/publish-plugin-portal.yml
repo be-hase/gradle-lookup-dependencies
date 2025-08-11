@@ -13,7 +13,7 @@ jobs:
       SIGNING_PGP_PASSWORD: ${{ secrets.SIGNING_PGP_PASSWORD }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
