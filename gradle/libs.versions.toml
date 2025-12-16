@@ -1,5 +1,5 @@
 [versions]
-kotlin-core = "2.2.21"
+kotlin-core = "2.3.0"
 ktlint = "1.2.1"
 
 [libraries]
